@@ -1,0 +1,18 @@
+
+<body>
+
+	<div class = "posted-title">
+		<p class = "show-input"><strong>Title: </strong><%= @post.title %></p>
+	</div>
+
+	<div class = "posted-body">
+		<p class = "show-input"><strong>Body: </strong><%= @post.body %></@>
+	</div>
+
+	<div class = "jump"><%= link_to 'edit', edit_post_path(@post.id), class: "edit_post#{@post.id}" %></div>
+
+	<div class = "jump"> | </div>
+
+	<div class = "jump"><%= link_to 'back', posts_path, class: "back" %></div>
+
+</body>

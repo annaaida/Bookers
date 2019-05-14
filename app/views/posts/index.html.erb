@@ -1,0 +1,48 @@
+
+<header>
+  <h2 class = "page-title">Books</h2>
+</header>
+
+<body>
+  <table>
+    <tr class = "first-line">
+	     <th>Title</th>
+	     <th>Body</th>
+	     <th colspan = "3"></th>
+    </tr>
+
+  	<% @posts.each do |post| %>
+
+    <tr>
+  	   <td class = "contents"><%= post.title %></td>
+  	   <td class = "contents"><%= post.body %></td>
+  	   <td class = "contents"><%= link_to 'show', post_path(post.id), class: "show_#{post.id}" %></td>
+  	   <td class = "contents"><%= link_to 'edit', edit_post_path(post.id), class: "edit_#{post.id}" %></td>
+  	   <td class = "contents"><%= link_to 'destroy', post_path(post.id), method: :delete, data:{confirm:"Are you sure?"}, class: "destroy_#{post.id}" %></td>
+    </tr>
+    <% end %>
+
+  </table>
+
+
+  <h2 class = "new-post">New book</h2>
+
+  <%= form_for(@post) do |f| %>
+
+  <div class = "input">
+    <h4 class = "input_content">Title</h4>
+    <div class = "box"><%= f.text_field :title, class: "book_title" %></div>
+  </div>
+
+  <div class = "input">
+    <h4 class = "input_content">Body</h4>
+    <div class = "box"><%= f.text_area :body, class: "book_body" %></div>
+  </div>
+
+  <%= f.submit 'Create Book' %>
+
+  <% end %>
+
+
+</body>
+

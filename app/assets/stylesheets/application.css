@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  color: #333;
+  margin: 33px;
+  line-height: 18px;
+  font-size: 13px;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.flash {
+  color: #008000;
+}
+
+/*top-page*/
+
+.top-title {
+  font-size: 2em;
+}
+
+.top-explanation {
+  margin: 30px;
+}
+
+.link-to-index {
+  color: #a9a9a9;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+
+/*index-page*/
+
+.page-title {
+  font-size: 2em;
+  display: block;
+  margin: 20px 0;
+}
+
+th {
+  color: #000000;
+  padding-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table {
+  border-spacing: 2px;
+}
+
+.contents {
+  padding: 0 5px 7px 5px;
+}
+
+.new-post {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.input_content {
+  font-weight: normal;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+/*edit-page*/
+
+.editing-title {
+  margin-bottom: 15px;
+}
+
+.jump {
+  float: left;
+}
+
+/*show-page*/
+
+.show-input {
+  margin-left: 30px;
+  margin-bottom: 20px
+}
+
+
+
